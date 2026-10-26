@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-white: #FAF7F2;
+  --color-pure-white: #FFFFFF;
+  --color-cobalt: #0047AB;
+  --color-cobalt-dark: #003580;
+  --color-sun-yellow: #FFC83D;
+  --color-ink: #1A1A1A;
+  --color-muted: #6B6B6B;
+  --color-border-subtle: #E8E2D9;
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: #FAF7F2;
+  --foreground: #1A1A1A;
+}
+
+body {
+  background-color: #FAF7F2;
+  color: #1A1A1A;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Scrollbar refinement */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8E2D9;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6B6B6B;
+}
